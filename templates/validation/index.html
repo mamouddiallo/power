@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+	<section class="container">
+		<div class="container-text">
+	
+			{% for admission in admissions %}
+			<h3>{{admission.name}}</h3>
+			<img src="{{admission.image.url}}">
+			<p>{{admission.description}}</p>
+			{% endfor%}
+	</div>
+	</section>
+{% endblock %}
